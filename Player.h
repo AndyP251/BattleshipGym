@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #pragma once  
 
 #include <string>
@@ -10,5 +11,20 @@ class Player {
 public:
     Player();
     int getPoints();
-    int(*getBoard())[10];
+ 
+=======
+#pragma once  
+#include "Board.h"
+#include <string>
+
+class Player {
+    std::string name;
+    Board* board_;
+    int points;
+
+public:
+    Player();
+    int getPoints();
+ 
+>>>>>>> 7569fb57cfc396ec2493d8662406dbfcab8e45f1
 };
