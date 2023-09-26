@@ -2,8 +2,7 @@
 #include <iostream>
 #include <string>
 
-#include "Player.h"
-#include "Player.h"
+
 #include "Board.h"
 #include "gameFunctionality.h"
 

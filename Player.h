@@ -1,10 +1,10 @@
 #pragma once  
-
+#include "Board.h"
 #include <string>
 
 class Player {
     std::string name;
-    int board[10][10];
+    Board* board_;
     int points;
 
 public:
