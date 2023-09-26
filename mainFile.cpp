@@ -3,18 +3,20 @@
 #include <string>
 
 #include "Player.h"
+#include "Player.h"
 #include "Board.h"
+#include "gameFunctionality.h"
 
 using namespace std;
 //andrews pull request
 
 int main() {
     std::cout << "This is still testing phase" << std::endl;
-    Player* p;
+    gameFunctionality* gf = new gameFunctionality;
 
-    std::cout << p->getPoints();
+    std::cout << gf->toString() << std::endl;
 
-    delete p;
+    delete gf;
     return 0;
 }
 
