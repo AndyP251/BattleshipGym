@@ -11,7 +11,7 @@ gameFunctionality::gameFunctionality() {
 }
 
 void gameFunctionality::runGame() {
-
+	//test
 }
 
 string gameFunctionality::toString() {
