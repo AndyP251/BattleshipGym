@@ -1,15 +1,14 @@
 using namespace std;
+#include "Player.h"
 
 #include <string>
 
-class Player {
 
 	string name;
 	int board [10][10];
 	int points;
 
-public:
-	Player() {
+	Player::Player() {
 		this->name = "";
 		this->points = 0;
 		for (int row = 0; row < 10; row++) {
@@ -18,11 +17,10 @@ public:
 			}
 		}
 	}
-	int getPoints() {
+	int Player::getPoints() {
 		return this->points;
 	}
-	int(*getBoard())[10]{
+	int(*Player::getBoard())[10]{
 		return this->board;
 	}
 
-};

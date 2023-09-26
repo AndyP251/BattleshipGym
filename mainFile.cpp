@@ -9,8 +9,10 @@ using namespace std;
 
 int main() {
     std::cout << "This is still testing phase" << std::endl;
-    Player* p = new Player();
+    Player* p;
+
     std::cout << p->getPoints();
+
     delete p;
     return 0;
 }
