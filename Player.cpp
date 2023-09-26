@@ -20,7 +20,4 @@ using namespace std;
 	int Player::getPoints() {
 		return this->points;
 	}
-	int(*Player::getBoard())[10]{
-		return this->board;
-	}
 

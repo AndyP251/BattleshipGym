@@ -10,5 +10,5 @@ class Player {
 public:
     Player();
     int getPoints();
-    int(*getBoard())[10];
+ 
 };
