@@ -3,6 +3,7 @@
 #include <string>
 
 #include "Player.h"
+#include "Board.h"
 
 using namespace std;
 //andrews pull request
