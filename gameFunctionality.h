@@ -14,5 +14,5 @@ public:
 	
 	gameFunctionality();
 	void runGame();
-	string toString();
+	string::string toString();
 };
