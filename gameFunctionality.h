@@ -11,6 +11,7 @@ class gameFunctionality {
 	
 	Player* p1;
 	Player* p2;
+	Board* board;
 	
 
 public:

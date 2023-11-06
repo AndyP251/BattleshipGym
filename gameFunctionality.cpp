@@ -9,15 +9,21 @@ using std::string;
 
 
 gameFunctionality::gameFunctionality() {
-	this->p1 = new Player;
-	this->p2 = new Player;
+	this->p1 = new Player();
+	this->p2 = new Player();
+	this->board = new Board();
 }
 
 void gameFunctionality::runGame() {
 	//test
-	std::cout << "this is a test";
+	std::cout << "Game Starting...";
+
+	std::cout << "the current board is: " << std::endl;
+	std::cout << board->toString()<<std::endl<<std::endl;
+
+
 }
 
 string gameFunctionality::toString() {
-	return " ";
+	return "toString";
 }

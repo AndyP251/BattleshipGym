@@ -1,17 +1,17 @@
 #pragma once
 
-enum Direction {NORTH, SOUTH, EAST, WEST};
+enum ORIENTATION {NORTH,SOUTH,WEST,EAST};
 
 class Ship{
     int length;
-
-    Direction direction;
-
-    int position[2]; 
+    ORIENTATION orriention;
+    
 
     public:
         Ship();
-        Ship(int, Direction, int[]);
+        Ship(int, ORIENTATION);
         void setDirection(char);
+        int getLen();
+
 };
 
