@@ -3,6 +3,9 @@
 
 #include <string>
 #include "Player.h"
+#include "Board.h"
+using std::string;
+
 
 class gameFunctionality {
 	
@@ -14,5 +17,5 @@ public:
 	
 	gameFunctionality();
 	void runGame();
-	string::string toString();
+	string toString();
 };
