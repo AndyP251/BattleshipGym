@@ -11,7 +11,8 @@ class Board {
 public:
     Board();
     int(*getBoard())[10];
-    void setNewShip(int startRowIDX, int startColIDX, int len, char direc);
+    bool setNewShip(int startRowIDX, int startColIDX, int len, char direc);
+    bool checkShipSet(int startRowIDX, int startColIDX, int len, char direc);
     string toString();
 
 };

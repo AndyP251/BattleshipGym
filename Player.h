@@ -1,5 +1,6 @@
 #pragma once  
 #include <string>
+#include "Board.h"
 
 class Player {
     std::string name;
@@ -9,6 +10,7 @@ class Player {
 public:
     Player();
     int getPoints();
-    int placeShip();
+    int placeShip(int);
+    Board* board;
  
 };

@@ -11,11 +11,16 @@ class gameFunctionality {
 	
 	Player* p1;
 	Player* p2;
-	Board* board;
+	
+
+	bool gameValid;
 	
 
 public:
 	
+	void setValid(bool);
+	bool getValid();
+
 	gameFunctionality();
 	void runGame();
 	string toString();

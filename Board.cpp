@@ -16,59 +16,106 @@ int(*Board::getBoard())[10]{
 	return board;
 }
 
-void Board::setNewShip(int startRowIDX, int startColIDX, int len, char direction) {
+bool Board::checkShipSet(int startRowIDX, int startColIDX, int len, char direction) {
 	if(direction=='N') {
 		for(int i = 0; i<len; i++) {
 			if(i+startRowIDX>=sizeof(Board::board)) {
-				//invalid -- implement reset to previous tiles
+				//invalid index
 
 				//short term fix error message
 				std::cout << "INVALID POSITION";
+				return false;
 			}
-			else {
-				Board::board[startRowIDX+i][startColIDX] = 1;
+			else if(Board::board[startRowIDX+i][startColIDX] != 0) {
+				std::cout << "OCCUPIED POSITION";
+				return false;
+				
 			}
 		}
 	}
 		if(direction=='S') {
 		for(int i = 0; i<len; i++) {
 			if(startRowIDX-i<=sizeof(Board::board)) {
-				//invalid -- implement reset to previous tiles
+				//invalid index
 
 				//short term fix error message
 				std::cout << "INVALID POSITION";
+				return false;
 			}
-			else {
-				Board::board[startRowIDX-i][startColIDX] = 1;
+			else if (Board::board[startRowIDX-i][startColIDX] != 0) {
+				
+				std::cout << "OCCUPIED POSITION";
+				return false;
 			}
 		}
 	}
 		if(direction=='E') {
 		for(int i = 0; i<len; i++) {
 			if(i+startColIDX>=sizeof(Board::board[startRowIDX])) {
-				//invalid -- implement reset to previous tiles
+				//invalid index
 
 				//short term fix error message
 				std::cout << "INVALID POSITION";
+				return false;
 			}
-			else {
-				Board::board[startRowIDX][startColIDX+i] = 1;
+			else if (Board::board[startRowIDX][startColIDX+i] != 0){
+				
+				std::cout << "OCCUPIED POSITION";
+				return false;
 			}
 		}
 	}
 		if(direction=='W') {
 		for(int i = 0; i<len; i++) {
 			if(startColIDX-i<=sizeof(Board::board[startRowIDX])) {
-				//invalid -- implement reset to previous tiles
+				//invalid index
 
 				//short term fix error message
 				std::cout << "INVALID POSITION";
+				return false;
 			}
-			else {
-				Board::board[startRowIDX][startColIDX-i] = 1;
+			else if (Board::board[startRowIDX][startColIDX-i] != 0){
+				
+				std::cout << "OCCUPIED POSITION";
+				return false;
 			}
 		}
 	}
+	return true;
+}
+bool Board::setNewShip(int startRowIDX, int startColIDX, int len, char direction) {
+	
+	if(direction=='N') {
+		for(int i = 0; i<len; i++) {
+			
+				Board::board[startRowIDX+i][startColIDX] = 1;
+			
+		}
+	}
+	else if(direction=='S') {
+		for(int i = 0; i<len; i++) {
+				Board::board[startRowIDX-i][startColIDX] = 1;
+			
+		}
+	}
+	else if(direction=='E') {
+		for(int i = 0; i<len; i++) {
+				Board::board[startRowIDX][startColIDX+i] = 1;
+			
+		}
+	}
+	else if(direction=='W') {
+		for(int i = 0; i<len; i++) {
+			Board::board[startRowIDX][startColIDX-i] = 1;
+			
+		}
+	}
+
+	else {
+		std::cout<< "invalid input" <<std::endl;
+		return false;
+	}
+	return true;
 }
 
 string Board::toString() {

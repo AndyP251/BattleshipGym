@@ -21,4 +21,15 @@ int main() {
 
 
 
+//todo:
+
+/*
+
+ - fix placeCheck and shipSet functions
+        - n/s inverted and false invalid calls
+
+
+*/
+
+
 
