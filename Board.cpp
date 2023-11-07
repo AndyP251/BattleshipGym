@@ -15,6 +15,13 @@ int(*Board::getBoard())[10] {
     return board;
 }
 
+void Board::changeVal(int row, int column, int value = 2) {
+	board[row][column] = value;
+}
+int Board::getVal(int row, int column) {
+	return board[row][column];
+}
+
 bool Board::checkShipSet(int startRowIDX, int startColIDX, int len, char direction) {
     if (direction == 'S') {
         for (int i = 0; i < len; i++) {
