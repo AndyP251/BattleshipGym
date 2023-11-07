@@ -37,13 +37,13 @@ using namespace std;
 		cout << "What Column do you want to place this on? ";
 		cin >> colIDX;
 
-		if(board->checkShipSet(rowIDX,colIDX,ships[moveCount],direction)==true) {
+		if(board->checkShipSet(rowIDX-1,colIDX-1,ships[moveCount],direction)==true) {
 			
 			bool functionValidation = false;
 			int maxAttempts = 3;  // Maximum number of attempts
 
 			for (int attempt = 0; attempt < maxAttempts; ++attempt) {
-    			functionValidation = board->setNewShip(rowIDX, colIDX, ships[moveCount], direction);
+    			functionValidation = board->setNewShip(rowIDX-1, colIDX-1, ships[moveCount], direction);
     			if (functionValidation) {
        				 // Ship placement was successful, exit the loop
        				 break;

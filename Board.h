@@ -7,6 +7,8 @@ class Board {
 
     int board[10][10];
     
+    int BOARDSIZE = 10;
+    
 
 public:
     Board();
