@@ -104,3 +104,12 @@ string Board::toString() {
     }
     return result;
 }
+int Board::checkWin() {
+    
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; i < 10; j++) {
+            if (board[i][j] == 1) { return 0; }
+        }
+    }
+    return 1;
+}

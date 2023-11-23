@@ -14,7 +14,7 @@ using namespace std;
 		board = new Board();
 		
 		for(int i = 0; i < getShipsLength(); i++) {ships[i] = i+2;}
-		
+		//2,3,4,5,6
 
 	}
 	int Player::getPoints() {
@@ -132,4 +132,6 @@ using namespace std;
 		if(initVal == 1) {return 1;}
 		return 0;
 	}
-
+	int Player::checkWinCondition() {
+		return board->checkWin();
+	}

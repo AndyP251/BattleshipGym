@@ -20,6 +20,8 @@ public:
     Board* board;
     int getShipsLength();
 
+    int checkWinCondition();
+
     //gameplay
     string Makeattack();
 

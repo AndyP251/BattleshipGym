@@ -37,7 +37,7 @@ void gameFunctionality::runGame() {
 	int turnMax = 0;
 
 	//gameAction
-	while(gameValid && turnMax < 20) {
+	while(gameValid && turnMax < 50) {
 
 		string p1Attack = p1->Makeattack();
 
@@ -56,7 +56,23 @@ void gameFunctionality::runGame() {
 		else {std::cout<<std::endl<<"Unsucessful Hit!"<<std::endl;}
 
 		std::cout<<p2->board->toString()<<std::endl;
+
+		if (turnMax >= 20) {
+			if (p1->checkWinCondition() == 1) {
+				std::cout << "\n" << "Player 2 Won!" "\n";
+				break;
+			}
+		}
 	}
+
+	std::cout << "Play Again? (Y/N)  ";
+	char replay;
+	std::cin >> replay;
+
+	if (replay == 'Y') {
+		gameFunctionality::runGame();
+	}
+
 
 }
 

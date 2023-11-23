@@ -20,5 +20,7 @@ public:
     void changeVal(int row, int column, int value);
     int getVal(int row, int column);
 
+    int checkWin();
+
 
 };
